@@ -2,11 +2,12 @@ import scrapy
 from scrapy.http import Response
 from downloadpackages.packages.items import PackagesItem
 from downloadpackages.log import log
+from scrapy_redis.spiders import RedisSpider
 
-class PackageSpider(scrapy.Spider):
+class PackageSpider(RedisSpider):
     name = 'package'
     allowed_domains = ['openmptcprouter.com']
-    start_urls = ['https://packages.openmptcprouter.com/']
+    start_urls = ['https://packages.openmptcprouter.com/', 'https://download.openmptcprouter.com/release/']
 
     def parse(self, response: Response):
 

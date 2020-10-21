@@ -26,7 +26,9 @@ class PackagesPipeline:
         # os.path.join将多个路径组合后返回
         # urllib.do(url, LocalPath)
         mkdir(LocalPath)
-        request.urlretrieve(url, LocalPath)
+        if not os.path.exists(LocalPath):
+
+            request.urlretrieve(url, LocalPath)
 
     def process_item(self, item, spider):
         url = item['url']

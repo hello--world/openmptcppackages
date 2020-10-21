@@ -60,10 +60,19 @@ DOWNLOAD_DELAY = 0
 #    'scrapy.extensions.telnet.TelnetConsole': None,
 #}
 
+SCHEDULER = "scrapy_redis.scheduler.Scheduler"
+
+# Ensure all spiders share same duplicates filter through redis.
+DUPEFILTER_CLASS = "scrapy_redis.dupefilter.RFPDupeFilter"
+
+REDIS_HOST = 'localhost'
+REDIS_PORT = 6379
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-   'packages.pipelines.PackagesPipeline': 300,
+   'scrapy_redis.pipelines.RedisPipeline': 300,
+
+   'packages.pipelines.PackagesPipeline': 350,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
