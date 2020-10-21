@@ -10,7 +10,10 @@ if sys.version_info[0] == 3:
     # import downloadpackages
     from downloadpackages import start_spider
     if __name__ == '__main__':
-        start_spider('package')
+        if len(sys.argv) > 1:
+            start_spider(sys.argv[1])
+        else:
+            start_spider('package')
 else: # Python 2
     print("please use python 3")
 

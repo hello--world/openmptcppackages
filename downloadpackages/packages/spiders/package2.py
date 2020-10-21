@@ -6,7 +6,7 @@ from downloadpackages.log import log
 class PackageSpider(scrapy.Spider):
     name = 'package'
     allowed_domains = ['openmptcprouter.com']
-    start_urls = ['https://packages.openmptcprouter.com/']
+    start_urls = ['https://download.openmptcprouter.com/release/']
 
     def parse(self, response: Response):
 
