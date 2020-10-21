@@ -7,7 +7,7 @@ from scrapy_redis.spiders import RedisSpider
 class PackageSpider(RedisSpider):
     name = 'package'
     allowed_domains = ['openmptcprouter.com']
-    start_urls = ['https://packages.openmptcprouter.com/', 'https://download.openmptcprouter.com/release/']
+    start_urls = ['https://download.openmptcprouter.com/release/v0.55.3/rpi4/', 'https://packages.openmptcprouter.com/v0.55.3/aarch64_cortex-a53/']
 
     def parse(self, response: Response):
 

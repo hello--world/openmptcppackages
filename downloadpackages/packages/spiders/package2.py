@@ -4,10 +4,10 @@ from downloadpackages.packages.items import PackagesItem
 from downloadpackages.log import log
 from scrapy_redis.spiders import RedisSpider
 
-class PackageSpider(RedisSpider):
-    name = 'package'
+class PackageSpider(scrapy.Spider):
+    name = 'package2'
     allowed_domains = ['openmptcprouter.com']
-    start_urls = ['https://download.openmptcprouter.com/release/']
+    start_urls = ['https://download.openmptcprouter.com/release/v0.55.3/rpi4/', 'https://packages.openmptcprouter.com/v0.55.3/aarch64_cortex-a53/']
 
     def parse(self, response: Response):
 
@@ -41,10 +41,4 @@ class PackageSpider(RedisSpider):
                 yield scrapy.Request(url, callback=self.parse)
             else:
                 yield item
-
-
-
-
-
-
 
