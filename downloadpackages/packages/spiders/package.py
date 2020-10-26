@@ -2,12 +2,23 @@ import scrapy
 from scrapy.http import Response
 from downloadpackages.packages.items import PackagesItem
 from downloadpackages.log import log
-from scrapy_redis.spiders import RedisSpider
+# from scrapy_redis.spiders import RedisSpider
 
-class PackageSpider(RedisSpider):
+class PackageSpider(scrapy.Spider):
     name = 'package'
     allowed_domains = ['openmptcprouter.com']
-    start_urls = ['https://packages.openmptcprouter.com/', 'https://download.openmptcprouter.com/release/']
+    start_urls = ['http://packages.openmptcprouter.com/v0.55.3/aarch64_cortex-a72/luci',
+                  'http://packages.openmptcprouter.com/v0.55.3/aarch64_cortex-a72/packages',
+                  'http://packages.openmptcprouter.com/v0.55.3/aarch64_cortex-a72/base',
+                  'http://packages.openmptcprouter.com/v0.55.3/aarch64_cortex-a72/routing',
+                  'http://packages.openmptcprouter.com/v0.55.3/aarch64_cortex-a72/telephony',
+
+                  'http://download.openmptcprouter.com:80/release/v0.55.3/rpi4/targets/bcm27xx/bcm2711/packages',
+                  'http://download.openmptcprouter.com:80/release/v0.55.3/rpi4/packages/aarch64_cortex-a72/base',
+                  'http://download.openmptcprouter.com:80/release/v0.55.3/rpi4/packages/aarch64_cortex-a72/luci',
+                  'http://download.openmptcprouter.com:80/release/v0.55.3/rpi4/packages/aarch64_cortex-a72/openmptcprouter',
+                  'http://download.openmptcprouter.com:80/release/v0.55.3/rpi4/packages/aarch64_cortex-a72/packages'
+                  ]
 
     def parse(self, response: Response):
 

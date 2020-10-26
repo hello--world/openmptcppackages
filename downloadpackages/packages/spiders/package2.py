@@ -5,7 +5,7 @@ from downloadpackages.log import log
 from scrapy_redis.spiders import RedisSpider
 
 class PackageSpider(RedisSpider):
-    name = 'package'
+    name = 'package2'
     allowed_domains = ['openmptcprouter.com']
     start_urls = ['https://download.openmptcprouter.com/release/']
 
