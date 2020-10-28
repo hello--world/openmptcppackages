@@ -72,7 +72,7 @@ DOWNLOAD_DELAY = 0
 ITEM_PIPELINES = {
    # 'scrapy_redis.pipelines.RedisPipeline': 300,
 
-   'packages.pipelines.PackagesPipeline': 350,
+   'packages.pipelines.PackagesPipeline': 1,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)

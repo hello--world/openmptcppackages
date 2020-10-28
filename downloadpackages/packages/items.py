@@ -6,6 +6,10 @@
 import scrapy
 
 
+class DownloadItem(scrapy.Item):
+    file_urls = scrapy.Field()
+    files = scrapy.Field
+
 class PackagesItem(scrapy.Item):
     # define the fields for your item here like:
     url = scrapy.Field()
