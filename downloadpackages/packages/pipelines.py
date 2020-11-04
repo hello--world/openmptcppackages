@@ -10,7 +10,8 @@ import os
 # from itemadapter import ItemAdapter
 # import urllib
 from urllib import request
-from urllib.parse import urlparse
+from urllib.parse import urlparse, unquote
+
 
 def mkdir(filepath:str):
     path = filepath.split('/')
@@ -29,7 +30,9 @@ class PackagesPipeline:
 
         if not os.path.exists(LocalPath):
             try:
-                request.urlretrieve(url, LocalPath)
+                new_path = unquote(LocalPath, 'utf-8')
+
+                request.urlretrieve(url, new_path)
                 print(f"download {url}")
             except:
                 print(f"download error {url}")
