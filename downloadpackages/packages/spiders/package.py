@@ -7,17 +7,17 @@ from downloadpackages.log import log
 class PackageSpider(scrapy.Spider):
     name = 'package'
     allowed_domains = ['openmptcprouter.com']
-    start_urls = ['http://packages.openmptcprouter.com/v0.56.2/aarch64_cortex-a72/luci',
-                  'http://packages.openmptcprouter.com/v0.56.2/aarch64_cortex-a72/packages',
-                  'http://packages.openmptcprouter.com/v0.56.2/aarch64_cortex-a72/base',
-                  'http://packages.openmptcprouter.com/v0.56.2/aarch64_cortex-a72/routing',
-                  'http://packages.openmptcprouter.com/v0.56.2/aarch64_cortex-a72/telephony',
+    start_urls = ['http://packages.openmptcprouter.com/v0.56.3/aarch64_cortex-a72/luci',
+                  'http://packages.openmptcprouter.com/v0.56.3/aarch64_cortex-a72/packages',
+                  'http://packages.openmptcprouter.com/v0.56.3/aarch64_cortex-a72/base',
+                  'http://packages.openmptcprouter.com/v0.56.3/aarch64_cortex-a72/routing',
+                  'http://packages.openmptcprouter.com/v0.56.3/aarch64_cortex-a72/telephony',
 
-                  'http://download.openmptcprouter.com:80/release/v0.56.2/rpi4/targets/bcm27xx/bcm2711/packages',
-                  'http://download.openmptcprouter.com:80/release/v0.56.2/rpi4/packages/aarch64_cortex-a72/base',
-                  'http://download.openmptcprouter.com:80/release/v0.56.2/rpi4/packages/aarch64_cortex-a72/luci',
-                  'http://download.openmptcprouter.com:80/release/v0.56.2/rpi4/packages/aarch64_cortex-a72/openmptcprouter',
-                  'http://download.openmptcprouter.com:80/release/v0.56.2/rpi4/packages/aarch64_cortex-a72/packages'
+                  'http://download.openmptcprouter.com:80/release/v0.56.3/rpi4/targets/bcm27xx/bcm2711/packages',
+                  'http://download.openmptcprouter.com:80/release/v0.56.3/rpi4/packages/aarch64_cortex-a72/base',
+                  'http://download.openmptcprouter.com:80/release/v0.56.3/rpi4/packages/aarch64_cortex-a72/luci',
+                  'http://download.openmptcprouter.com:80/release/v0.56.3/rpi4/packages/aarch64_cortex-a72/openmptcprouter',
+                  'http://download.openmptcprouter.com:80/release/v0.56.3/rpi4/packages/aarch64_cortex-a72/packages'
                   ]
 
     def parse(self, response: Response):
