@@ -2,7 +2,12 @@ import scrapy
 from scrapy.http import Response
 from downloadpackages.packages.items import PackagesItem
 from downloadpackages.log import log
-from scrapy_redis.spiders import RedisSpider
+try:
+    from scrapy_redis.spiders import RedisSpider # noqa
+except:
+    import traceback
+    traceback.print_exc()
+    RedisSpider = object
 
 class PackageSpider(RedisSpider):
     name = 'package2'
