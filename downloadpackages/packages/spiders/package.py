@@ -10,7 +10,7 @@ class PackageSpider(scrapy.Spider):
     name = 'package'
     allowed_domains = ['openmptcprouter.com']
     start_urls = [
-        # f'http://packages.openmptcprouter.com/{Version}/aarch64_cortex-a72',
+        f'http://packages.openmptcprouter.com/{Version}/aarch64_cortex-a72',
                   # f'http://packages.openmptcprouter.com/{Version}/aarch64_cortex-a72/packages',
                   # f'http://packages.openmptcprouter.com/{Version}/aarch64_cortex-a72/base',
                   # f'http://packages.openmptcprouter.com/{Version}/aarch64_cortex-a72/routing',
