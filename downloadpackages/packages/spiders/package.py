@@ -4,7 +4,7 @@ from downloadpackages.packages.items import PackagesItem
 from downloadpackages.log import log
 # from scrapy_redis.spiders import RedisSpider
 
-Version = 'v0.58'
+Version = 'v0.58.1'
 
 class PackageSpider(scrapy.Spider):
     name = 'package'
@@ -16,7 +16,7 @@ class PackageSpider(scrapy.Spider):
                   # f'http://packages.openmptcprouter.com/{Version}/aarch64_cortex-a72/routing',
                   # f'http://packages.openmptcprouter.com/{Version}/aarch64_cortex-a72/telephony',
 
-                  # f'http://download.openmptcprouter.com:80/release/{Version}/rpi4',
+                  f'http://download.openmptcprouter.com:80/release/{Version}/rpi4',
                   # f'http://download.openmptcprouter.com:80/release/{Version}/rpi4/packages/aarch64_cortex-a72/base',
                   # f'http://download.openmptcprouter.com:80/release/{Version}/rpi4/packages/aarch64_cortex-a72/luci',
                   # f'http://download.openmptcprouter.com:80/release/{Version}/rpi4/packages/aarch64_cortex-a72/openmptcprouter',
