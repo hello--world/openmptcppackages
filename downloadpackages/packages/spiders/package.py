@@ -4,7 +4,7 @@ from downloadpackages.packages.items import PackagesItem
 from downloadpackages.log import log
 # from scrapy_redis.spiders import RedisSpider
 
-Version = 'v0.58.1'
+Version = 'v0.58.2'
 
 class PackageSpider(scrapy.Spider):
     name = 'package'
