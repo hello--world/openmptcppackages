@@ -16,11 +16,11 @@ class PackageSpider(scrapy.Spider):
                   f'https://packages.openmptcprouter.com/{Version}/aarch64_cortex-a72/routing',
                   f'https://packages.openmptcprouter.com/{Version}/aarch64_cortex-a72/telephony',
 
-                  f'https://download.openmptcprouter.com:80/release/{Version}/rpi4',
-                  f'https://download.openmptcprouter.com:80/release/{Version}/rpi4/packages/aarch64_cortex-a72/base',
-                  f'https://download.openmptcprouter.com:80/release/{Version}/rpi4/packages/aarch64_cortex-a72/luci',
-                  f'https://download.openmptcprouter.com:80/release/{Version}/rpi4/packages/aarch64_cortex-a72/openmptcprouter',
-                  f'https://download.openmptcprouter.com:80/release/{Version}/rpi4/packages/aarch64_cortex-a72/packages'
+                  f'https://download.openmptcprouter.com/release/{Version}/rpi4',
+                  f'https://download.openmptcprouter.com/release/{Version}/rpi4/packages/aarch64_cortex-a72/base',
+                  f'https://download.openmptcprouter.com/release/{Version}/rpi4/packages/aarch64_cortex-a72/luci',
+                  f'https://download.openmptcprouter.com/release/{Version}/rpi4/packages/aarch64_cortex-a72/openmptcprouter',
+                  f'https://download.openmptcprouter.com/release/{Version}/rpi4/packages/aarch64_cortex-a72/packages'
                   ]
 
     def parse(self, response: Response):
